@@ -186,7 +186,6 @@ public class Engine {
                     } else {
                         System.out.print(".. ");
                     }
-                    System.out.print("..");
                     continue;
                 }
                 if (i == 9) {
