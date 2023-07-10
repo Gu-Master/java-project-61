@@ -181,10 +181,14 @@ public class Engine {
                 sum += rand + indRand;
                 arr[j] = sum;
                 if (j == indRand) {
-                    System.out.print(" ..");
+                    System.out.print("..");
                     continue;
                 }
-                System.out.print(" " + arr[j]);
+                if (i == 9) {
+                    System.out.print(arr[j]);
+                } else {
+                    System.out.print(arr[j] + " ");
+                }
             }
             System.out.println("");
             System.out.print("Your answer: ");
