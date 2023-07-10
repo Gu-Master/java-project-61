@@ -85,11 +85,11 @@ public class Engine {
             System.out.print("Your answer: ");
             answer = scan.nextLine();
             System.out.print("");
-            if (rand % 2 == 0 && answer.equals("yes")) {
+            if (rand % 2 != 0 && answer.equals("yes")) {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
                 System.out.println("Let's try again, " + name + "!");
                 break;
-            } else if (rand % 2 != 0 && answer.equals("no")) {
+            } else if (rand % 2 == 0 && answer.equals("no")) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.");
                 System.out.println("Let's try again, " + name + "!");
                 break;
