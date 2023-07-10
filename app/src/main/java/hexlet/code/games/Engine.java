@@ -3,10 +3,10 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class Engine {
-    //1 - Greet
-    //2 - Even
-    //3 - Calc
-    //0 - Exit
+    static int rand;
+    static int rand2;
+    static int indRand;
+
     public static int calcCal(int a, int b, String str) {
         if (str.equals("+")) {
             return a + b;
@@ -45,9 +45,7 @@ public class Engine {
     public static void calc(String name) {
         Scanner scan = new Scanner(System.in);
         int answer;
-        int rand;
-        int rand2;
-        int indRand;
+
         String[] oper = {"+", "-", "*"};
         System.out.println("What is the result of the expression?");
         for (int i = 0; i < 3; i++) {
@@ -106,7 +104,6 @@ public class Engine {
     public static void pride(String name) {
         Scanner scan = new Scanner(System.in);
         String answer = new String();
-        int rand;
 
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         for (int i = 0; i < 3; i++) {
@@ -136,9 +133,7 @@ public class Engine {
     public static void gcd(String name) {
         Scanner scan = new Scanner(System.in);
         int answer;
-        int rand;
-        int rand2;
-        int indRand;
+
         int[] arr = {2, 3, 4, 5, 7};
         System.out.println("Find the greatest common divisor of given numbers.");
         for (int i = 0; i < 3; i++) {
@@ -168,9 +163,6 @@ public class Engine {
     public static void progress(String name) {
         Scanner scan = new Scanner(System.in);
         int answer;
-        int rand;
-        int rand2;
-        int indRand;
         int[] arr = new int[10];
         System.out.println("What number is missing in the progression?");
         for (int i = 0; i < 3; i++) {
