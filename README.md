@@ -5,8 +5,7 @@
 
 #2 - Even
 [![Asciinema](https://asciinema.org/a/d8088bdc-74ad-4b6f-b6cc-7ee31c89240c
-.svg)](https://asciinema.org/a/d8088bdc-74ad-4b6f-b6cc-7ee31c89240c
-)
+.svg)](https://asciinema.org/a/d8088bdc-74ad-4b6f-b6cc-7ee31c89240c)
 
 #3 - Calc
 
