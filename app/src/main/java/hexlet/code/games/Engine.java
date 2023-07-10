@@ -146,7 +146,7 @@ public class Engine {
             indRand = (int) Math.random() * 4;
             rand = (int) (Math.random() * (20 - 1) + 1) * arr[indRand];
             rand2 = (int) (Math.random() * (20 - 1) + 1) * arr[indRand];
-            System.out.println("Question: " + rand + " and " + rand2);
+            System.out.println("Question: " + rand + " " + rand2);
             System.out.print("Your answer: ");
             answer = scan.nextInt();
             System.out.print("");
