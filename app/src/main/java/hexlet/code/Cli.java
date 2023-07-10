@@ -4,11 +4,10 @@ import java.util.Scanner;
 
 public class Cli {
     public static String isName(String name) {
-        System.out.println("What is your name !?");
-        System.out.print("My name is - ");
+        System.out.print("May I have your name? ");
         Scanner scan = new Scanner(System.in);
         name = scan.nextLine();
-        System.out.println("Ok, your name is " + name);
+        System.out.println("Hello, " + name + "!");
         return name;
     }
 

@@ -18,11 +18,11 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
-
         int choise = scan.nextInt();
         if (choise == 0 || choise < 1 || choise > 6) {
             return;
         }
+        System.out.println("");
         System.out.println("Welcome to the Brain Games!");
         String name = "";
         name = Cli.isName(name);
