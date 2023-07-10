@@ -172,7 +172,7 @@ public class Engine {
         int rand2;
         int indRand;
         int[] arr = new int[10];
-        System.out.println("Find the greatest common divisor of given numbers.");
+        System.out.println("What number is missing in the progression?");
         for (int i = 0; i < 3; i++) {
             rand = (int) (Math.random() * (15 - 1) + 1);
             indRand = (int) (Math.random() * 10);
