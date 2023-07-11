@@ -5,12 +5,12 @@ import hexlet.code.games.Engine;
 import java.util.Scanner;
 
 public class App {
-    static int exit = 0;
-    static int gameEven = 2;
-    static int gameGCD = 4;
-    static int gameCalc = 3;
-    static int gameProgres = 5;
-    static int gamePride = 6;
+    private static int exit = 0;
+    private static int gameEven = 2;
+    private static int gameGCD = 4;
+    private static int gameCalc = 3;
+    private static int gameProgres = 5;
+    private static int gamePride = 6;
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
