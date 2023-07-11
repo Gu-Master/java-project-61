@@ -30,6 +30,11 @@ public class Engine {
     private static final int PROGRESSION_RANDOM_MAX = 15;
 
     private static final String PROGRESSION_MARKER = "..";
+    private static int rand;
+    private static int rand2;
+    private static int indRand;
+    private static int answer;
+    private static String answerStr;
 
     public static int calcCal(int a, int b, String str) {
         if (str.equals(OPERATOR_PLUS)) {
@@ -68,10 +73,6 @@ public class Engine {
 
     public static void calc(String name) {
         Scanner scan = new Scanner(System.in);
-        int answer;
-        int rand;
-        int rand2;
-        int indRand;
         String[] oper = {OPERATOR_PLUS, OPERATOR_MINUS, OPERATOR_MULTIPLY};
         System.out.println("What is the result of the expression?");
         for (int i = 0; i < 3; i++) {
@@ -99,21 +100,20 @@ public class Engine {
 
     public static void even(String name) {
         Scanner scan = new Scanner(System.in);
-        String answer;
-        int rand;
+
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (int i = 0; i < 3; i++) {
             rand = (int) (Math.random() * (RANDOM_MAX_EVEN - RANDOM_MIN_EVEN + 1) + RANDOM_MIN_EVEN);
             System.out.println("Question: " + rand);
             System.out.print("Your answer: ");
-            answer = scan.nextLine();
+            answerStr = scan.nextLine();
             System.out.println();
-            if (rand % 2 != 0 && answer.equals("yes")) {
+            if (rand % 2 != 0 && answerStr.equals("yes")) {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
                 System.out.println("Let's try again, " + name + "!");
                 break;
-            } else if (rand % 2 == 0 && answer.equals("no")) {
+            } else if (rand % 2 == 0 && answerStr.equals("no")) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.");
                 System.out.println("Let's try again, " + name + "!");
                 break;
@@ -129,21 +129,19 @@ public class Engine {
 
     public static void pride(String name) {
         Scanner scan = new Scanner(System.in);
-        String answer;
-        int rand;
 
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         for (int i = 0; i < 3; i++) {
             rand = (int) (Math.random() * (RANDOM_MAX_PRIME - RANDOM_MIN_PRIME + 1) + RANDOM_MIN_PRIME);
             System.out.println("Question: " + rand);
             System.out.print("Your answer: ");
-            answer = scan.nextLine();
+            answerStr = scan.nextLine();
             System.out.println();
-            if (!Engine.isPride(rand) && answer.equals("yes")) {
+            if (!Engine.isPride(rand) && answerStr.equals("yes")) {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
                 System.out.println("Let's try again, " + name + "!");
                 break;
-            } else if (Engine.isPride(rand) && answer.equals("no")) {
+            } else if (Engine.isPride(rand) && answerStr.equals("no")) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.");
                 System.out.println("Let's try again, " + name + "!");
                 break;
@@ -159,10 +157,6 @@ public class Engine {
 
     public static void gcd(String name) {
         Scanner scan = new Scanner(System.in);
-        int answer;
-        int rand;
-        int rand2;
-        int indRand;
         int[] arr = PROGRESSION_NUMBERS;
         System.out.println("Find the greatest common divisor of given numbers.");
         for (int i = 0; i < 3; i++) {
@@ -190,9 +184,6 @@ public class Engine {
 
     public static void progress(String name) {
         Scanner scan = new Scanner(System.in);
-        int answer;
-        int rand;
-        int indRand;
         int[] arr = new int[PROGRESSION_LENGTH];
         System.out.println("What number is missing in the progression?");
         for (int i = 0; i < 3; i++) {
