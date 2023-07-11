@@ -27,7 +27,7 @@ public class Engine {
 
     private static final int PROGRESSION_LENGTH = 10;
 
-    private static final int CountWine = 3;
+    private static int countWine = 3;
     private static final int PROGRESSION_RANDOM_MAX = 15;
 
     private static final String PROGRESSION_MARKER = "..";
@@ -76,10 +76,10 @@ public class Engine {
         Scanner scan = new Scanner(System.in);
         String[] oper = {OPERATOR_PLUS, OPERATOR_MINUS, OPERATOR_MULTIPLY};
         System.out.println("What is the result of the expression?");
-        for (int i = 0; i < CountWine; i++) {
+        for (int i = 0; i < countWine; i++) {
             rand = (int) (Math.random() * (RANDOM_MAX - RANDOM_MIN + 1) + RANDOM_MIN);
             rand2 = (int) (Math.random() * (RANDOM_MAX - RANDOM_MIN + 1) + RANDOM_MIN);
-            indRand = (int) (Math.random() * 3);
+            indRand = (int) (Math.random() * countWine);
             System.out.println("Question: " + rand + " " + oper[indRand] + " " + rand2);
             System.out.print("Your answer: ");
             answer = scan.nextInt();
@@ -104,7 +104,7 @@ public class Engine {
 
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        for (int i = 0; i < CountWine; i++) {
+        for (int i = 0; i < countWine; i++) {
             rand = (int) (Math.random() * (RANDOM_MAX_EVEN - RANDOM_MIN_EVEN + 1) + RANDOM_MIN_EVEN);
             System.out.println("Question: " + rand);
             System.out.print("Your answer: ");
@@ -120,7 +120,7 @@ public class Engine {
                 break;
             } else {
                 System.out.println("Correct!");
-                if (i == CountWine - 1) {
+                if (i == countWine - 1) {
                     System.out.println("Congratulations, " + name + "!");
                     break;
                 }
@@ -132,7 +132,7 @@ public class Engine {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        for (int i = 0; i < CountWine; i++) {
+        for (int i = 0; i < countWine; i++) {
             rand = (int) (Math.random() * (RANDOM_MAX_PRIME - RANDOM_MIN_PRIME + 1) + RANDOM_MIN_PRIME);
             System.out.println("Question: " + rand);
             System.out.print("Your answer: ");
@@ -160,8 +160,8 @@ public class Engine {
         Scanner scan = new Scanner(System.in);
         int[] arr = PROGRESSION_NUMBERS;
         System.out.println("Find the greatest common divisor of given numbers.");
-        for (int i = 0; i < CountWine; i++) {
-            indRand = (int) (Math.random() * 4);
+        for (int i = 0; i < countWine; i++) {
+            indRand = (int) (Math.random() * (countWine + 1));
             rand = (int) (Math.random() * (RANDOM_MAX_GCD - RANDOM_MIN_GCD + 1) + RANDOM_MIN_GCD) * arr[indRand];
             rand2 = (int) (Math.random() * (RANDOM_MAX_GCD - RANDOM_MIN_GCD + 1) + RANDOM_MIN_GCD) * arr[indRand];
             System.out.println("Question: " + rand + " " + rand2);
@@ -187,7 +187,7 @@ public class Engine {
         Scanner scan = new Scanner(System.in);
         int[] arr = new int[PROGRESSION_LENGTH];
         System.out.println("What number is missing in the progression?");
-        for (int i = 0; i < CountWine; i++) {
+        for (int i = 0; i < countWine; i++) {
             rand = (int) (Math.random() * (PROGRESSION_RANDOM_MAX - RANDOM_MIN + 1) + RANDOM_MIN);
             indRand = (int) (Math.random() * PROGRESSION_LENGTH);
             System.out.print("Question: ");
@@ -219,7 +219,7 @@ public class Engine {
                 break;
             } else {
                 System.out.println("Correct!");
-                if (i == CountWine - 1) {
+                if (i == countWine - 1) {
                     System.out.println("Congratulations, " + name + "!");
                     break;
                 }

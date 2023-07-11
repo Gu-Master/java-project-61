@@ -5,12 +5,12 @@ import hexlet.code.games.Engine;
 import java.util.Scanner;
 
 public class App {
-    static final int exit = 0;
-    static final int GameEven = 2;
-    static final int GameGCD = 4;
-    static final int GameCalc = 3;
-    static final int GameProg = 5;
-    static final int GamePride = 6;
+    static int exit = 0;
+    static int gameEven = 2;
+    static int gameGCD = 4;
+    static int gameCalc = 3;
+    static int gameProgres = 5;
+    static int gamePride = 6;
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -36,15 +36,15 @@ public class App {
 
         scan.nextLine();
         System.out.println("");
-        if (choise == GameEven) {
+        if (choise == gameEven) {
             Engine.even(name);
-        } else if (choise == GameCalc) {
+        } else if (choise == gameCalc) {
             Engine.calc(name);
-        } else if (choise == GameGCD) {
+        } else if (choise == gameGCD) {
             Engine.gcd(name);
-        } else if (choise == GameProg) {
+        } else if (choise == gameProgres) {
             Engine.progress(name);
-        } else if (choise == GamePride) {
+        } else if (choise == gamePride) {
             Engine.pride(name);
         }
 
